@@ -282,4 +282,6 @@ The only logo mark is the text string **`MFT`** in the nav — `Inter`, `1rem`, 
 - The **iridescent 3D torus knot background and night-sky canvas** are core to the brand's feel and can't be fully reproduced in static slide/card contexts. The UI kit recreates them faithfully; static exports should fall back to one of the section-mood gradients documented above.
  
  U p d a t e d :   0 5 / 2 0 / 2 0 2 6   1 5 : 1 0 : 4 4  
+  
+ U p d a t e d :   0 5 / 2 0 / 2 0 2 6   1 5 : 1 4 : 3 0  
  
