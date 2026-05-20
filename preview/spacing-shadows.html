@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Shadows</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+  body { padding: 36px; font-family: var(--font-sans); background: #f6f6f8; }
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .box { background: #fff; border-radius: 18px; padding: 18px; height: 130px; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px; border: 1px solid rgba(29,29,31,0.05); }
+  .name { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1d1d1f; }
+  .val { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #6e6e73; }
+  .sm { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+  .lg { box-shadow: 0 24px 60px rgba(0,0,0,0.10); }
+  .none { box-shadow: none; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="box none">
+      <div class="name">Rest</div>
+      <div class="val">no shadow</div>
+    </div>
+    <div class="box sm">
+      <div class="name">Shadow · sm</div>
+      <div class="val">0 4px 16px rgba(0,0,0,.06)</div>
+    </div>
+    <div class="box lg">
+      <div class="name">Shadow · lg (hover)</div>
+      <div class="val">0 24px 60px rgba(0,0,0,.10)</div>
+    </div>
+  </div>
+</body>
+</html>

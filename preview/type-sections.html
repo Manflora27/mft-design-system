@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Section type system</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { padding: 28px 36px; font-family: var(--font-sans); color: #1d1d1f; background: #fff; }
+  .stack { display: flex; flex-direction: column; gap: 22px; }
+  .row { display: flex; gap: 24px; align-items: baseline; }
+  .label { width: 110px; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #6e6e73; flex-shrink: 0; }
+  .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #0071e3; }
+  .section-title { font-size: 3rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.05; }
+  .h2-hero { font-size: 2.25rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; }
+  .h3 { font-size: 1.4rem; font-weight: 600; letter-spacing: -0.02em; }
+</style>
+</head>
+<body>
+  <div class="stack">
+    <div class="row"><div class="label">section-label</div><div class="section-label">Projects</div></div>
+    <div class="row"><div class="label">section-title</div><div class="section-title">Work I'm proud of.</div></div>
+    <div class="row"><div class="label">h2 (about)</div><div class="h2-hero">Turning complexity into clarity.</div></div>
+    <div class="row"><div class="label">h3 (card)</div><div class="h3">Arduino Rain Detection System</div></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Corner radii</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+  body { padding: 24px 30px; font-family: var(--font-sans); }
+  .row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; align-items: end; }
+  .tile { background: #fff; border: 1px solid rgba(29,29,31,0.10); padding: 14px; height: 110px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
+  .name { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6e6e73; }
+  .val { font-family: ui-monospace, Menlo, monospace; font-size: 0.78rem; color: #1d1d1f; font-weight: 500; }
+  .pill { padding: 12px 22px; background: #0071e3; color: #fff; font-weight: 500; font-size: 0.85rem; }
+  .circle { width: 72px; height: 72px; background: #0071e3; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="tile" style="border-radius: 12px;"><div class="name">sm</div><div class="val">12px</div></div>
+    <div class="tile" style="border-radius: 14px;"><div class="name">md (field)</div><div class="val">14px</div></div>
+    <div class="tile" style="border-radius: 20px;"><div class="name">lg</div><div class="val">20px</div></div>
+    <div class="tile" style="border-radius: 28px;"><div class="name">xl (card)</div><div class="val">28px</div></div>
+    <div class="tile" style="border-radius: 980px; padding: 0; display: flex; align-items: center; justify-content: center;">
+      <span class="pill" style="border-radius: 980px;">Pill · 980px</span>
+    </div>
+    <div class="tile" style="border-radius: 50%; padding: 0; display: flex; align-items: center; justify-content: center; background: none; border: none; box-shadow: none;">
+      <div class="circle" style="border-radius: 50%;"></div>
+    </div>
+  </div>
+</body>
+</html>

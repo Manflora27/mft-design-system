@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Top navigation</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+  body { margin: 0; padding: 24px; font-family: var(--font-sans);
+         background:
+           radial-gradient(ellipse at 30% 30%, rgba(100,50,200,.35), transparent 55%),
+           linear-gradient(160deg, #0a0e27, #1a1a2e); min-height: 200px; }
+  .nav {
+    background: rgba(0,0,0,0.72);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    border-radius: 14px;
+  }
+  .inner { padding: 0 24px; height: 52px; display: flex; align-items: center; gap: 24px; }
+  .logo { color: #f5f5f7; font-weight: 700; letter-spacing: -0.02em; font-size: 1rem; }
+  .links { flex: 1; display: flex; justify-content: center; gap: 28px; }
+  .links a { font-size: 0.875rem; color: #f5f5f7; text-decoration: none; opacity: 0.8; }
+  .links a.active { opacity: 1; }
+  .toggle { width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.10); background: rgba(28,28,30,0.68); backdrop-filter: blur(12px); display: grid; place-items: center; }
+  .toggle img { width: 18px; height: 18px; }
+  .tag { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #98989d; margin-top: 14px; padding: 0 4px; }
+</style>
+</head>
+<body>
+  <div class="nav">
+    <div class="inner">
+      <span class="logo">MFT</span>
+      <div class="links">
+        <a class="active">About</a>
+        <a>Experience</a>
+        <a>Skills</a>
+        <a>Projects</a>
+        <a>Contact</a>
+      </div>
+      <button class="toggle"><img src="../assets/icon-light-mode.svg" alt=""></button>
+    </div>
+  </div>
+  <div class="tag" style="color:#98989d;">Fixed top · 52px · glass blur(24px) sat(180%) · centered links · trailing theme toggle</div>
+</body>
+</html>

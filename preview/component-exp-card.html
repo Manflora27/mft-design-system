@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Experience card</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+  body { margin: 0; padding: 28px; font-family: var(--font-sans); color: #f5f5f7;
+         background:
+           radial-gradient(ellipse at 18% 22%, rgba(100,50,200,.42), transparent 52%),
+           radial-gradient(ellipse at 84% 78%, rgba(30,70,180,.38), transparent 52%),
+           linear-gradient(160deg, #0a0e27, #1a1a2e 50%, #0f0c29); }
+  .card {
+    background: rgba(28,28,30,0.68);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 28px;
+    padding: 28px 32px;
+    max-width: 640px;
+  }
+  .meta { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 0.85rem; color: #98989d; font-weight: 500; }
+  .role { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 2px; }
+  .company { font-size: 1rem; color: #2997ff; font-weight: 500; margin-bottom: 16px; }
+  ul { list-style: none; padding: 0; border-top: 1px solid rgba(255,255,255,0.10); margin-top: 2px; }
+  li { padding: 8px 0; color: #98989d; font-size: 0.95rem; display: flex; gap: 10px; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.10); }
+  li:last-child { border-bottom: none; }
+  li::before { content: "→"; color: #2997ff; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="meta"><span>Jan 2031 – Present</span><span>·</span><span>Ang Mo Kio City, Singapore</span></div>
+    <div class="role">Software Engineer</div>
+    <div class="company">Apple</div>
+    <ul>
+      <li>Optimized System Performance</li>
+      <li>Developed Cross-Platform Features</li>
+      <li>Engineered Scalable Solutions</li>
+    </ul>
+  </div>
+</body>
+</html>

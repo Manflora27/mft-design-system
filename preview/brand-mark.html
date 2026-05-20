@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MFT mark</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+  body { margin: 0; padding: 0; font-family: var(--font-sans); display: grid; grid-template-columns: 1fr 1fr; min-height: 200px; }
+  .panel { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 14px; padding: 24px; }
+  .light { background: #f8f8fa; color: #1d1d1f; }
+  .dark { background: linear-gradient(160deg, #0a0e27, #1a1a2e 60%, #0f0c29); color: #f5f5f7; }
+  .mark { font-size: 4.5rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
+  .small { font-family: ui-monospace, Menlo, monospace; font-size: 11px; opacity: 0.7; }
+</style>
+</head>
+<body>
+  <div class="panel light"><div class="mark">MFT</div><div class="small">Inter 800 · −0.04em · #1d1d1f</div></div>
+  <div class="panel dark"><div class="mark">MFT</div><div class="small">Inter 800 · −0.04em · #f5f5f7</div></div>
+</body>
+</html>

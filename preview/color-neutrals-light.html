@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Neutrals — Light theme</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+  body { padding: 24px; }
+  .row2 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .sw { border-radius: 14px; padding: 14px; height: 120px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 1px 0 rgba(0,0,0,0.04); border: 1px solid rgba(29,29,31,0.06); }
+  .sw .name { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.8; }
+  .sw .hex { font-family: ui-monospace, Menlo, monospace; font-size: 0.85rem; font-weight: 500; }
+  .sw small { font-size: 0.68rem; opacity: 0.78; }
+</style>
+</head>
+<body>
+  <div class="row2">
+    <div class="sw" style="background:#1d1d1f; color:#fff;">
+      <div><div class="name">Text</div><small>Headings, body</small></div>
+      <div class="hex">#1d1d1f</div>
+    </div>
+    <div class="sw" style="background:#6e6e73; color:#fff;">
+      <div><div class="name">Muted</div><small>Secondary copy, meta</small></div>
+      <div class="hex">#6e6e73</div>
+    </div>
+    <div class="sw" style="background:#f8f8fa; color:#1d1d1f;">
+      <div><div class="name">Page background</div><small>Solid fallback</small></div>
+      <div class="hex">#f8f8fa</div>
+    </div>
+    <div class="sw" style="background:#fff; color:#1d1d1f;">
+      <div><div class="name">Surface · 72%</div><small>Glass card fill</small></div>
+      <div class="hex">rgba(255,255,255,.72)</div>
+    </div>
+  </div>
+</body>
+</html>

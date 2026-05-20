@@ -1,0 +1,274 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   MFT Portfolio — Design Tokens
+   Mirrors the variables in the source Web-try/style.css and adds an
+   exhaustive semantic layer for use across the design system.
+   =================================================================== */
+
+/* ── Webfont — SF Pro Text (uploaded brand font) ───────────────────────
+   Available weights: 100 / 200 / 400 / 500 italic-only / 600.
+   The system falls back to native -apple-system / Inter for missing weights
+   (700, 800). font-synthesis is enabled so browsers can faux-bold from 600
+   when no heavier file is available. */
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("fonts/SF-Pro-Text-Thin.otf") format("opentype");
+  font-weight: 100; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("fonts/SF-Pro-Text-ThinItalic.otf") format("opentype");
+  font-weight: 100; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("fonts/SF-Pro-Text-Ultralight.otf") format("opentype");
+  font-weight: 200; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("fonts/SF-Pro-Text-UltralightItalic.otf") format("opentype");
+  font-weight: 200; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("fonts/SF-Pro-Text-Regular.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("fonts/SF-Pro-Text-RegularItalic.otf") format("opentype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("fonts/SF-Pro-Text-MediumItalic.otf") format("opentype");
+  font-weight: 500; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("fonts/SF-Pro-Text-Semibold.otf") format("opentype");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("fonts/SF-Pro-Text-SemiboldItalic.otf") format("opentype");
+  font-weight: 600; font-style: italic; font-display: swap;
+}
+
+html { font-synthesis: weight style; }
+
+:root {
+  /* ── Brand color ──────────────────────────────────────────────────── */
+  --accent:           #0071e3;       /* Apple-style electric blue */
+  --accent-hover:     #0077ed;
+
+  /* ── Surface / text — light theme defaults ────────────────────────── */
+  --bg:               rgba(248, 248, 250, 0.88);   /* translucent over canvas */
+  --bg-solid:         #f8f8fa;                     /* opaque fallback */
+  --surface:          rgba(255, 255, 255, 0.72);   /* glass card */
+  --nav-bg:           rgba(248, 248, 250, 0.76);
+  --text:             #1d1d1f;                     /* primary fg */
+  --muted:            #6e6e73;                     /* secondary fg */
+  --line:             rgba(29, 29, 31, 0.10);      /* hairline divider */
+  --page-base:        #050508;                     /* gap-fill behind canvas */
+
+  /* ── Radii ────────────────────────────────────────────────────────── */
+  --radius-sm:        12px;
+  --radius-md:        14px;
+  --radius-lg:        20px;
+  --radius-xl:        28px;
+  --radius-pill:      980px;
+  --radius-circle:    50%;
+
+  /* ── Elevation ────────────────────────────────────────────────────── */
+  --shadow-sm:        0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-md:        0 12px 28px rgba(0, 0, 0, 0.12);
+  --shadow-lg:        0 24px 60px rgba(0, 0, 0, 0.10);
+
+  /* ── Glass blur tiers ─────────────────────────────────────────────── */
+  --blur-nav:         blur(24px) saturate(180%);
+  --blur-card:        blur(18px) saturate(160%);
+  --blur-pill:        blur(14px) saturate(140%);
+  --blur-field:       blur(12px);
+
+  /* ── Spacing scale (8-pt grid w/ tighter half-steps) ──────────────── */
+  --space-1:          4px;
+  --space-2:          8px;
+  --space-3:          12px;
+  --space-4:          16px;
+  --space-5:          20px;
+  --space-6:          24px;
+  --space-8:          32px;
+  --space-10:         40px;
+  --space-12:         48px;
+  --space-16:         64px;
+  --space-20:         80px;
+  --space-24:         96px;
+  --space-30:         120px;
+
+  /* ── Layout ───────────────────────────────────────────────────────── */
+  --container-max:    1200px;
+  --container-px:     24px;
+  --nav-height:       52px;
+
+  /* ── Motion ───────────────────────────────────────────────────────── */
+  --ease-out:         cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out:      cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:         0.2s;
+  --dur-base:         0.35s;
+  --dur-slow:         0.8s;
+
+  /* ── Typography ───────────────────────────────────────────────────── */
+  --font-sans:        "SF Pro Text", -apple-system, BlinkMacSystemFont,
+                      "Helvetica Neue", "Inter", sans-serif;
+
+  /* Sizes — many are fluid via clamp() to mirror the source CSS */
+  --fs-display:       clamp(3.5rem, 9vw, 7rem);    /* hero H1 */
+  --fs-h2-hero:       clamp(1.75rem, 3.5vw, 3rem); /* about heading */
+  --fs-section:       clamp(2rem, 4vw, 3.5rem);    /* section title */
+  --fs-hero-sub:      clamp(1.15rem, 2.5vw, 1.75rem);
+  --fs-body-lg:       clamp(1rem, 1.5vw, 1.15rem);
+  --fs-h3:            1.4rem;
+  --fs-h3-tile:       1.35rem;
+  --fs-body:          1rem;
+  --fs-sm:            0.95rem;
+  --fs-xs:            0.875rem;
+  --fs-eyebrow:       0.8rem;
+  --fs-label:         0.75rem;
+  --fs-footer:        0.82rem;
+
+  /* SF Pro Text ships only 100/200/400/500-italic/600.
+     Heavier roles all map to 600 — the system fallback fills in 700/800
+     on Apple devices via -apple-system. */
+  --fw-thin:          100;
+  --fw-ultralight:    200;
+  --fw-light:         200;   /* was 300 in source; nearest available is 200 */
+  --fw-regular:       400;
+  --fw-medium:        500;
+  --fw-semibold:      600;
+  --fw-bold:          600;   /* was 700; SF Pro Text caps at 600 */
+  --fw-black:         600;   /* was 800; SF Pro Text caps at 600 */
+
+  --ls-display:       -0.04em;
+  --ls-tight:         -0.03em;
+  --ls-snug:          -0.02em;
+  --ls-base:          -0.01em;
+  --ls-eyebrow:        0.10em;
+  --ls-label:          0.12em;
+
+  --lh-tight:         1.0;
+  --lh-snug:          1.1;
+  --lh-base:          1.4;
+  --lh-body:          1.6;
+  --lh-loose:         1.75;
+}
+
+/* ── Dark theme overrides ───────────────────────────────────────────── */
+body.dark, .theme-dark {
+  --bg:               rgba(0, 0, 0, 0.65);
+  --bg-solid:         #0a0e27;
+  --surface:          rgba(28, 28, 30, 0.68);
+  --nav-bg:           rgba(0, 0, 0, 0.72);
+  --text:             #f5f5f7;
+  --muted:            #98989d;
+  --line:             rgba(255, 255, 255, 0.10);
+  --accent:           #2997ff;
+  --accent-hover:     #57aeff;
+  --shadow-sm:        0 4px 16px rgba(0, 0, 0, 0.30);
+  --shadow-md:        0 12px 28px rgba(0, 0, 0, 0.40);
+  --shadow-lg:        0 24px 60px rgba(0, 0, 0, 0.50);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Semantic typography utilities — drop these classes on any element
+   and you get the brand voice in size/weight/tracking automatically.
+   =================================================================== */
+
+.t-display {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-display);
+  letter-spacing: var(--ls-display);
+  line-height: var(--lh-tight);
+}
+
+.t-section-title {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-section);
+  letter-spacing: var(--ls-tight);
+  line-height: 1.05;
+}
+
+.t-h2 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h2-hero);
+  letter-spacing: var(--ls-tight);
+  line-height: var(--lh-snug);
+}
+
+.t-h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h3);
+  letter-spacing: var(--ls-snug);
+}
+
+.t-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.t-section-label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.t-hero-sub {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-hero-sub);
+  letter-spacing: var(--ls-base);
+  line-height: var(--lh-base);
+  color: var(--muted);
+}
+
+.t-body-lg {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-loose);
+  color: var(--muted);
+}
+
+.t-body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text);
+}
+
+.t-muted {
+  color: var(--muted);
+}
+
+.t-meta {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: var(--fw-medium);
+  color: var(--muted);
+}
+
+.t-link {
+  color: var(--accent);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+}

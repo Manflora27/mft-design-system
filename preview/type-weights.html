@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SF Pro Text — available weights</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { padding: 28px 36px; font-family: var(--font-sans); color: #1d1d1f; background: #fff; }
+  .row { display: grid; grid-template-columns: 90px 1fr 90px; gap: 16px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid rgba(29,29,31,0.06); }
+  .row:last-child { border: none; }
+  .tag { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #6e6e73; }
+  .specimen { font-size: 1.6rem; letter-spacing: -0.02em; color: #1d1d1f; }
+  .specimen.italic { font-style: italic; }
+  .miss { color: #c0392b; }
+  h3 { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6e6e73; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+  <h3>SF Pro Text — weights available</h3>
+  <div class="row"><div class="tag">100 Thin</div><div class="specimen" style="font-weight:100;">Designer of systems.</div><div class="tag">✓</div></div>
+  <div class="row"><div class="tag">200 Ultralight</div><div class="specimen" style="font-weight:200;">Designer of systems.</div><div class="tag">✓</div></div>
+  <div class="row"><div class="tag">400 Regular</div><div class="specimen" style="font-weight:400;">Designer of systems.</div><div class="tag">✓</div></div>
+  <div class="row"><div class="tag">500 Medium</div><div class="specimen italic" style="font-weight:500;">italic only — Designer of systems.</div><div class="tag">italic only</div></div>
+  <div class="row"><div class="tag">600 Semibold</div><div class="specimen" style="font-weight:600;">Designer of systems.</div><div class="tag">✓ heaviest</div></div>
+  <div class="row"><div class="tag miss">700 Bold</div><div class="specimen" style="font-weight:700;">Designer of systems.</div><div class="tag miss">missing — caps at 600</div></div>
+  <div class="row"><div class="tag miss">800 Black</div><div class="specimen" style="font-weight:800;">Designer of systems.</div><div class="tag miss">missing — caps at 600</div></div>
+</body>
+</html>

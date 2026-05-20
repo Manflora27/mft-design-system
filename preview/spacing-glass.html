@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Glass surfaces</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+  body { margin: 0; padding: 28px; font-family: var(--font-sans); color: #f5f5f7;
+         background:
+           radial-gradient(ellipse at 18% 22%, rgba(100, 50, 200, 0.45), transparent 52%),
+           radial-gradient(ellipse at 84% 78%, rgba(30, 70, 180, 0.38), transparent 52%),
+           radial-gradient(ellipse at 70% 10%, rgba(120, 30, 100, 0.30), transparent 42%),
+           linear-gradient(160deg, #0a0e27, #1a1a2e 50%, #0f0c29); }
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .glass {
+    background: rgba(28, 28, 30, 0.68);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 24px;
+    padding: 18px 20px;
+    height: 130px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .name { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+  .val { font-family: ui-monospace, Menlo, monospace; font-size: 11px; opacity: 0.75; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="glass" style="backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%);">
+      <div class="name">Nav</div>
+      <div class="val">blur(24px) sat(180%) · alpha .72</div>
+    </div>
+    <div class="glass">
+      <div class="name">Card</div>
+      <div class="val">blur(18px) sat(160%) · alpha .68</div>
+    </div>
+    <div class="glass" style="backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%);">
+      <div class="name">Pill / field</div>
+      <div class="val">blur(14px) sat(140%) · alpha .68</div>
+    </div>
+  </div>
+</body>
+</html>

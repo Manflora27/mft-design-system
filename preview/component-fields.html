@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Form fields</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+  body { padding: 28px 30px; font-family: var(--font-sans); background: #f6f6f8; color: #1d1d1f; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 720px; }
+  label { font-size: 0.85rem; font-weight: 500; color: #6e6e73; margin-bottom: 6px; display: block; }
+  input, textarea { width: 100%; background: rgba(255,255,255,0.72); border: 1px solid rgba(29,29,31,0.10); border-radius: 14px; padding: 14px 16px; font: inherit; outline: none; backdrop-filter: blur(12px); }
+  .focused { border-color: #0071e3; box-shadow: 0 0 0 4px rgba(0,113,227,0.14); }
+  .tag { font-family: ui-monospace, Menlo, monospace; font-size: 10px; color: #6e6e73; margin-top: 6px; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div>
+      <label>Name</label>
+      <input placeholder="Your name">
+      <div class="tag">Rest · radius 14px · alpha .72 · blur 12px</div>
+    </div>
+    <div>
+      <label>Email</label>
+      <input class="focused" value="manel@example.com">
+      <div class="tag">Focus · accent border + 4px halo @ 14% accent</div>
+    </div>
+  </div>
+</body>
+</html>

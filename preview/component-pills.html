@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Skill pills</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+  body { padding: 28px 30px; font-family: var(--font-sans); background: #f6f6f8; }
+  ul { display: flex; gap: 12px; flex-wrap: wrap; list-style: none; padding: 0; }
+  li { padding: 12px 26px; border-radius: 999px; background: rgba(255,255,255,0.72); backdrop-filter: blur(14px) saturate(140%); border: 1px solid rgba(29,29,31,0.10); font-size: 1rem; font-weight: 500; color: #1d1d1f; }
+  li.hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+  .tag { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #6e6e73; margin-top: 14px; }
+</style>
+</head>
+<body>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li class="hover">Python</li>
+    <li>Java</li>
+    <li>C++</li>
+  </ul>
+  <div class="tag">pill radius 999px · padding 12 26 · glass surface · hover translateY(−2px) + shadow-sm</div>
+</body>
+</html>

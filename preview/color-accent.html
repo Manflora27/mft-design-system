@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Brand color — Apple Blue</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+  body { padding: 24px; }
+  .swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .sw { border-radius: 14px; padding: 16px; height: 130px; display: flex; flex-direction: column; justify-content: space-between; color: #fff; box-shadow: 0 1px 0 rgba(0,0,0,0.04); }
+  .sw .name { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; }
+  .sw .hex { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9rem; font-weight: 500; }
+  .sw small { font-size: 0.7rem; opacity: 0.78; }
+</style>
+</head>
+<body>
+  <div class="swatches">
+    <div class="sw" style="background:#0071e3;">
+      <div><div class="name">Accent · Light</div><small>Primary link / button</small></div>
+      <div class="hex">#0071e3</div>
+    </div>
+    <div class="sw" style="background:#0077ed;">
+      <div><div class="name">Accent hover · Light</div><small>+1% lighter, hover state</small></div>
+      <div class="hex">#0077ed</div>
+    </div>
+    <div class="sw" style="background:#2997ff;">
+      <div><div class="name">Accent · Dark</div><small>Apple's iOS link blue</small></div>
+      <div class="hex">#2997ff</div>
+    </div>
+    <div class="sw" style="background:#57aeff;">
+      <div><div class="name">Accent hover · Dark</div><small>Hover lift on dark</small></div>
+      <div class="hex">#57aeff</div>
+    </div>
+  </div>
+</body>
+</html>

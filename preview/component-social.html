@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Social icon tiles</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+  body { padding: 28px 30px; font-family: var(--font-sans); background: #f6f6f8; }
+  .heading { font-size: 0.85rem; font-weight: 500; color: #6e6e73; margin-bottom: 12px; }
+  .links { display: flex; gap: 12px; }
+  .links a { width: 46px; height: 46px; border-radius: 12px; border: 1px solid rgba(29,29,31,0.10); background: rgba(255,255,255,0.72); backdrop-filter: blur(12px); padding: 8px; display: grid; place-items: center; transition: transform 0.2s; }
+  .links a:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.12); }
+  .links img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .tag { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #6e6e73; margin-top: 14px; }
+</style>
+</head>
+<body>
+  <div class="heading">Find me on</div>
+  <div class="links">
+    <a><img src="../assets/Facebook.png" alt="Facebook"></a>
+    <a><img src="../assets/Github.png" alt="GitHub"></a>
+    <a><img src="../assets/Instagram.png" alt="Instagram"></a>
+  </div>
+  <div class="tag">46×46 · radius 12px · glass surface · hover lift 3px + shadow-md</div>
+</body>
+</html>
